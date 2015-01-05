@@ -1,0 +1,8 @@
+<h1>Welcome to Chitter</h1>
+
+Current Posts:
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.message %></li>
+  <% end %>
+</ul>

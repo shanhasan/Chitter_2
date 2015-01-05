@@ -1,12 +1,16 @@
 require 'sinatra/base'
 require 'data_mapper'
-require './lib/post' # this needs to be done after datamapper is initialised
+require_relative './model/post.rb' # this needs to be done after datamapper is initialised
 
 class MyApp < Sinatra::Base
   
+  set :views, Proc.new{File.join(root, "..", "views")} 
+
   get '/' do
-    'Hello MyApp!'
+    @posts = Post.all 
+    erb :index
   end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
