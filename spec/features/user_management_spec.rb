@@ -10,7 +10,7 @@ feature "User signs up" do
 
   def sign_up(email = "shan119@hotmail.co.uk",
               password = "hishan")
-    visit '/user/new'
+    visit '/users/new'
     expect(page.status_code).to eq(200)
     fill_in :email, :with => email
     fill_in :password, :with => password
