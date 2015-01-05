@@ -11,6 +11,11 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
+  post '/post' do
+  message = params["message"]
+  Post.create(:message => message)
+  redirect to('/')
+end
 
   # start the server if ruby file executed directly
   run! if app_file == $0

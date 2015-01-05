@@ -6,3 +6,10 @@ Current Posts:
     <li><%= post.message %></li>
   <% end %>
 </ul>
+
+<div id="new-post">
+  <form action="/post" method="post">
+    Message: <input type="text" name="message">
+    <input type="submit" value="Add post">
+  </form>
+</div>
