@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'data_mapper'
 require 'rack-flash'
 require 'sinatra/partial'
+require 'rest-client'
 
 require_relative './model/post.rb' # this needs to be done after datamapper is initialised
 require_relative './model/user.rb' # this needs to be done after datamapper is initialised
@@ -16,6 +17,8 @@ require_relative './controllers/sessions.rb'
 
 class MyApp < Sinatra::Base
   
+  register Sinatra::Partial
+
   enable :sessions
   set :session_secret, 'super secret'
   use Rack::Flash
@@ -23,7 +26,9 @@ class MyApp < Sinatra::Base
   set :partial_template_engine, :erb
 
 
-  set :views, Proc.new{File.join(root, "..", "..", "views")} 
+  set :views, Proc.new{File.join(root, "..", "views")} 
+  set :public, Proc.new{File.join(root, "..", "public")} 
+
 
   helpers Users_Helper
 
