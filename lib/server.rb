@@ -27,7 +27,7 @@ class MyApp < Sinatra::Base
 
 
   set :views, Proc.new{File.join(root, "..", "views")} 
-  set :public, Proc.new{File.join(root, "..", "public")} 
+  set :public_dir, Proc.new{File.join(root, "..", "public_dir")} 
 
 
   helpers Users_Helper

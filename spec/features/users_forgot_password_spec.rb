@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "User forgets password" do
   
   scenario "when on sign in page" do
-    visit '/'
+    visit '/sessions/new'
     expect(page).to have_content("Forgot password?")
   end
 
