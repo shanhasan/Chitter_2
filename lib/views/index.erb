@@ -1,22 +1,47 @@
-<h1>Welcome to Chitter</h1>
-
 Current Posts:
 <ul>
   <% @posts.each do |post| %>
-    <li><%= post.message %></li>
+    <div class="list-group">
+    <a class="list-group-item active">
+      <li><%= post.message %></li>
+      </a>
+    </div>
   <% end %>
 </ul>
 
 <div id="new-post">
   <form action="/post" method="post">
     Message: <input type="text" name="message">
-    <input type="submit" value="Add post">
+    <input type="submit" class="btn btn-default" value="Add post">
   </form>
 </div>
 
-<a href="/users/forgot_password">Forgot password?</a>
+<div class="container container-footer">
+  <div class="footer">
+    <small>
+      <a class="links_bar" href="/">About</a>
+      <a class="links_bar" href="/">Help</a>
+      <a class="links_bar" href="/">Blog</a>
+      <a class="links_bar" href="/">Status</a>
+      <a class="links_bar" href="/">Jobs</a>
+      <a class="links_bar" href="/">Terms</a>
+      <a class="links_bar" href="/">Privacy</a>
+      <a class="links_bar" href="/">Cookies</a>
+      <a class="links_bar" href="/">Ads info</a>
+      <a class="links_bar" href="/">Brand</a>
+      <a class="links_bar" href="/">Advertise</a>
+      <a class="links_bar" href="/">Businesses</a>
+      <a class="links_bar" href="/">Media</a>
+      <a class="links_bar" href="/">Developers</a>
+      <a class="links_bar" href="/">Directory</a>
+      <a class="links_bar" >© 2015 Twitter</a>
+    </small>
+  <div>
+</div>
+
+<!-- <a href="/users/forgot_password">Forgot password?</a>
 <a href="/">Home Page</a>
 <a href="/sessions/new">Sign in</a>
 <a href="/users/new">Sign up</a>
 <a href="/users/forgot_password">Forgot password?</a>
-<a href="/users/forgot_password">Forgot password?</a>
+<a href="/users/forgot_password">Forgot password?</a> -->

@@ -1,0 +1,56 @@
+.navbar {
+  width:100%;
+  height: 46px;
+  background: #fff;
+  min-height: 46px;
+}
+
+.nav>li>a {
+  padding-right: 3px;
+  padding-left: 0px;
+  padding-bottom: 15px;
+}
+
+.container {
+  height: 46px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  opacity: 0.9;
+}
+
+.container-footer {
+  height: 46px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  opacity: 0.9;
+}
+
+.navbar-brand {
+  max-width: 24px;
+  max-height: 23px;
+  margin:0;
+}
+
+.languages-dropdown {
+  padding: 0px;
+  font-weight: 500;
+}
+
+.navbar-right {
+  margin-right: 0px;
+}
+
+.footer{
+  float: center;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 15px;
+}
+
+.links_bar {
+  padding: 2.5px;
+}
