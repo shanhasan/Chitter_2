@@ -1,4 +1,4 @@
-Please sign in. 
+<!-- Please sign in. 
 
 <form method="post" action="/sessions">
   Email: <input type="text" name="email">
@@ -7,4 +7,39 @@ Please sign in.
 </form>
 
 <a href="/users/forgot_password">Forgot password?</a>
+ -->
 
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" value="Sign in" class="btn btn-default">Submit</button>
+</form>
+
+
+<form method="post" action="/sessions">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" name="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input input type="password" name="password" class="form-control">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <input type="submit" value="Sign in" class="btn btn-default">
+</form>
