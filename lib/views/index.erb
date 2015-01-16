@@ -1,9 +1,44 @@
-<main class="container-fluid front-page" id="red">
+<nav class="navbar-wrapper navbar-fixed-top nav-bar-border chitter-navbar" id="red" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigatoin</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img style="max-width:23px; max-height: 23px" alt="Brand" src="images/twitter_logo.png"> 
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><small>Language:</small></a></li>
+        <li class="dropdown languages-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">English<b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href='#'>English</a></li>
+            <li><a href='#'>French</a></li>
+            <li><a href='#'>German</a></li>
+            <li><a href='#'>English</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Greek</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container-fluid front-page top-margin" id="red">
   <div class="container main-content-wrapper" id="red">
     <div class="main-content" id="red">
+      <div class="main-content-header-body">
+        <h1 class="front-page-header">Welcome to Twitter.</h1>
+        <p>Connect with your friends — and other fascinating people. Get in-the-moment updates on the things that interest you. And watch events unfold, in real time, from every angle.</p>
+      </div>
     </div>
 
-    <div class="main-form-sign-in" id="red">
+    <div class="main-form-sign-in sign-up-in-form" id="red">
      <form method="post" action="/sessions">
         <div class="form-group">
           <input type="text" name="email" class="form-control" placeholder="Phone, email or username">
@@ -26,7 +61,7 @@
       </form>
     </div>
 
-    <div class="main-form-sign-up" id="red">
+    <div class="main-form-sign-up sign-up-in-form" id="red">
       <div class="navbar navbar-default navbar-sign-up">
         <div class="container-fluid">
           <strong>New to Twitter?</strong> Sign up 

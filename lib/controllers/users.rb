@@ -4,9 +4,9 @@ include Users_Helper
 
 class MyApp < Sinatra::Base
 
-  get '/users/new' do
+  get '/' do
     @user = User.new
-    erb :"users/new"
+    erb :"index"
   end
 
   post '/users' do
@@ -15,10 +15,10 @@ class MyApp < Sinatra::Base
                        password_confirmation: params[:password_confirmation])
     if @user.save
       session[:user_id] = @user.id
-      redirect to('/')
+      redirect to('/homepage')
     else
       flash.now[:errors] = @user.errors.full_messages
-      erb :"users/new"
+      erb :"index"
     end
   end
 

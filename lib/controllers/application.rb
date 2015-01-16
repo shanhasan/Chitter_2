@@ -1,8 +1,7 @@
 class MyApp < Sinatra::Base
 
-  get '/' do
-      @posts = Post.all 
-      erb :index
-    end
+  get '/' do 
+    erb :index
+  end
 
 end

@@ -1,7 +1,7 @@
 class MyApp < Sinatra::Base
 
-  get '/sessions/new' do
-    erb :"sessions/new"
+  get '/' do
+    erb :"index"
   end
 
   post '/sessions' do
@@ -9,10 +9,10 @@ class MyApp < Sinatra::Base
     user = User.authenticate(email, password)
     if user
       session[:user_id] = user.id
-      redirect to('/')
+      redirect to('/homepage')
     else
       flash[:errors] = ["The email or password is incorrect"]
-      erb :"sessions/new"
+      erb :"index"
     end
   end
 
